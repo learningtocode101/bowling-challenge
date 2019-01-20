@@ -17,4 +17,13 @@ describe('Bowling Scorecard', ()=>{
       expect(scorecard2.final_score).toEqual(5);
     })
   })
+  describe('its a strike', ()=>{
+    scorecard3 = new ScoreCard
+    it('knocks down 10 pins in first roll', ()=>{
+      scorecard3.roll(10);
+      expect(scorecard3.final_score).toEqual(10);
+      expect(scorecard3.roll_count).toBe(2);
+    })
+  })
+
 });
