@@ -9,4 +9,12 @@ describe('Bowling Scorecard', ()=>{
       expect(scorecard1.final_score).toEqual(0);
     });
   });
+  describe('knocks down some pins in first frame', ()=>{
+    scorecard2 = new ScoreCard
+    it('return score for knocked pins', ()=>{
+      scorecard2.roll(2);
+      scorecard2.roll(3);
+      expect(scorecard2.final_score).toEqual(5);
+    })
+  })
 });
