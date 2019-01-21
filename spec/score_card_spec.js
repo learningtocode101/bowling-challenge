@@ -2,7 +2,7 @@ describe('Bowling Scorecard', ()=>{
   describe('Gutter game', ()=>{
     scorecard1 = new ScoreCard
     it('returns zero if user gutters ball for all 10 frames', ()=>{
-      for(let i =0; i <=20; i++){
+      for(let i =0; i <= 20; i++){
         scorecard1.roll(0);
       }
       expect(scorecard1.is_complete).toBe(true);
@@ -22,7 +22,7 @@ describe('Bowling Scorecard', ()=>{
     it('knocks down 10 pins in first roll', ()=>{
       scorecard3.roll(10);
       expect(scorecard3.final_score).toEqual(10);
-      expect(scorecard3.roll_count).toBe(2);
+      expect(scorecard3.roll_count).toBe(0);
     })
   })
 
